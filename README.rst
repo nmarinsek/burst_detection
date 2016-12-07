@@ -38,7 +38,8 @@ OUTPUTS:
    - r: number of target events in each time period (nx1)
    - p: probabilities associated with each state (kx1)
 
-USAGE::
+USAGE:
+::
    q, d, r, p = burst_detection(r, d, n, s=2, gamma=1, smooth_win=3)
 
 enumerate_bursts:
@@ -51,7 +52,8 @@ INPUT:
 OUTPUT:
    - bursts: a pandas dataframe containing the time points that each burst began and ended
 
-USAGE::
+USAGE:
+::
    bursts = enumerate_bursts(q)
 
 burst_weights:
@@ -67,7 +69,8 @@ INPUTS:
 OUTPUT:
    - bursts: a pandas dataframe containing the weights of each burst, in order
 
-USAGE::
+USAGE:
+::
    weighted_bursts = burst_weights(bursts, r, d, p)
 
 
@@ -107,8 +110,8 @@ EXAMPLE
    print 'weighted bursts:'
    print weighted_bursts
 
-OUTPUT::
-
+OUTPUT:
+::
    observed probabilities: 
    [ 0.00  0.18  0.08  0.60  0.70  0.25 0.67  0.70  0.15  0.09]
 
