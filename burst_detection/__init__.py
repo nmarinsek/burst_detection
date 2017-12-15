@@ -65,13 +65,13 @@ def burst_detection(r,d,n,s,gamma,smooth_win):
     q = np.full([n,1],np.nan)
 
     #use the Viterbi algorithm to find the optimal state sequence
-    for t in range((smooth_win-1)/2,((smooth_win-1)/2)+real_n):
+    for t in range(int((smooth_win-1)/2),(int((smooth_win-1)/2))+real_n):
 
         #calculate the cost to transition to each state
         for j in range(k): 
 
             #for the first timepoint, calculate the fit cost only
-            if t == (smooth_win-1)/2:
+            if t == int((smooth_win-1)/2):
                 cost[t,j] = fit(d[t],r[t],p[j])
 
             #for all other timepoints, calculate the fit and transition cost
